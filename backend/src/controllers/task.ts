@@ -70,6 +70,24 @@ export const createTask: RequestHandler = async (req, res, next) => {
   }
 };
 
+export const updateTask: RequestHandler = async (req, res, next) => {
+  // your code here
+  const errors = validationResult(req);
+  const { id } = req.params;
+  const { title, description, isChecked } = req.body;
+  try {
+    validationErrorParser(errors);
+    const task = await TaskModel.findByIdAndUpdate(id, {
+      title: title,
+      description: description,
+      isChecked: isChecked,
+    });
+    res.status(201).json(task);
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const removeTask: RequestHandler = async (req, res, next) => {
   const { id } = req.params;
 
