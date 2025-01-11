@@ -1,0 +1,35 @@
+.outerCovering {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.title {
+  font: var(--font-heading);
+}
+.taskHeader {
+  display: flex; /* Use flexbox to align elements inline */
+  align-items: center; /* Vertically align elements */
+  justify-content: space-between; /* Add spacing between title and button */
+}
+
+.editButton {
+  margin-left: auto; /* Push the button to the far right */
+}
+
+.description {
+  margin-top: 1.5rem;
+}
+
+.taskDetailItem {
+  margin-top: 1.5rem;
+}
+
+.taskDetailLabel {
+  font: var(--font-label);
+}
+
+.taskDetailContent {
+  margin-left: 1rem;
+}

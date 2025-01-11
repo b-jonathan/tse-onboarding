@@ -25,8 +25,13 @@
   text-overflow: ellipsis;
 }
 
-.title {
+.textContainer .title {
   font: var(--font-label);
+  text-decoration: none;
+}
+
+.textContainer .title:hover {
+  text-decoration: underline;
 }
 
 .checked {
