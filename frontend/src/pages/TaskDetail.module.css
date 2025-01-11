@@ -24,6 +24,8 @@
 
 .taskDetailItem {
   margin-top: 1.5rem;
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center align */
 }
 
 .taskDetailLabel {

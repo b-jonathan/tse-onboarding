@@ -7,7 +7,6 @@ import createHttpError from "http-errors";
 import { validationResult } from "express-validator";
 import TaskModel from "src/models/task";
 import validationErrorParser from "src/util/validationErrorParser";
-import UserModel from "src/models/users";
 
 /**
  * This is an example of an Express API request handler. We'll tell Express to
@@ -86,7 +85,7 @@ export const updateTask: RequestHandler = async (req, res, next) => {
       description: description,
       isChecked: isChecked,
       assignee: assignee,
-    });
+    }).populate("assignee");
     res.status(200).json(task);
   } catch (error) {
     next(error);

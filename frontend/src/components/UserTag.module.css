@@ -1,0 +1,11 @@
+.userTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profilePicture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
